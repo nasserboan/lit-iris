@@ -1,0 +1,8 @@
+name: lit-iris
+dependencies:
+  - keras
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pip:
+    - streamlit
