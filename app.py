@@ -136,16 +136,16 @@ st.sidebar.success('You\'re about to train a [MLPClassifier](https://en.wikipedi
 
 ## parameters
 
-test_size = st.sidebar.slider('Test Size',min_value=0.01,max_value=0.99,value=0.25)
-NUM_EPOCHS = st.sidebar.slider('Number of Epochs',min_value=10,max_value=500,step=10,value=100)
+test_size = st.sidebar.slider('Test size',min_value=0.01,max_value=0.99,value=0.25)
+NUM_EPOCHS = st.sidebar.slider('Number of epochs',min_value=10,max_value=500,step=10,value=100)
 
-input_size = st.sidebar.slider('# Neurons 1st layer',min_value=1,max_value=64,value=4,step=1)
-dense1 = st.sidebar.slider('# Neurons 1st hidden layer',min_value=1,max_value=64,value=4,step=1)
-dense2 = st.sidebar.slider('# Neurons 2nd hidden layer',min_value=1,max_value=64,value=4,step=1)
-drop_out = st.sidebar.slider('Drop Out',min_value=0.0,max_value=0.8,value=0.2)
+input_size = st.sidebar.slider('# neurons of dense_1',min_value=1,max_value=64,value=4,step=1)
+dense1 = st.sidebar.slider('# neurons of dense_2',min_value=1,max_value=64,value=4,step=1)
+dense2 = st.sidebar.slider('# neurons of dense_3',min_value=1,max_value=64,value=4,step=1)
+drop_out = st.sidebar.slider('Dropout',min_value=0.0,max_value=0.8,value=0.2)
 
-act_input = st.sidebar.radio('1st Layer Activation',['relu','tanh','sigmoid','elu','selu','linear'])
-act_dense = st.sidebar.radio('Dense Layer Activation',['relu','tanh','sigmoid','elu','selu','linear'])
+act_input = st.sidebar.radio('dense_1 activation function',['relu','tanh','sigmoid','elu','selu','linear'])
+act_dense = st.sidebar.radio('dense_2 and dense_3 activation function',['relu','tanh','sigmoid','elu','selu','linear'])
 
 
 def main():
