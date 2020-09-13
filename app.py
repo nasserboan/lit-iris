@@ -130,7 +130,7 @@ def model_plot(NUM_EPOCHS,test_size,drop_out,input_size,dense1,dense2,act_input,
 
 ## creating the sidebar
 
-st.sidebar.title('Hyperparameters')
+st.sidebar.title('Teste1')
 st.sidebar.success('You\'re about to train a [MLPClassifier](https://en.wikipedia.org/wiki/Multilayer_perceptron) and test it using the [Iris Dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set), but first you have to choose the hyperparameters below. After you\'re done click the \'Train Model!\' button.')
 
 
@@ -154,6 +154,8 @@ def main():
     history,model = train(model,x_train,y_train_cat,NUM_EPOCHS,x_test,y_test_cat)
     fig = model_plot(NUM_EPOCHS,test_size,drop_out,input_size,dense1,dense2,act_input,act_dense,model,x_test,y_test,history)
     return fig
+
+st.sidebar.selectbox('Choose you model',['vgg','alexnet','resnet32'])
 
 if st.sidebar.button('Train model!'):
     st.write(main())
